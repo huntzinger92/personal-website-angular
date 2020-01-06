@@ -1,0 +1,22 @@
+<div id='code-wrapper'>
+  <div id='container'>
+    <div id='page-description'>
+      <p id='p-description'>As a self-taught developer, what I can find a use for in my day to day life guides what I learn about and build. I love using the
+        programming skills I have acquired to serve the people around me, and to help make knowledge and information more accessible. The finished works here
+        reflect that passion. You can find a list of my projects (finished and ongoing) on my
+        <a href='https://github.com/huntzinger92' target='_blank' class="description-link">Github profile</a>.</p>
+    </div>
+    <div *ngFor="let project of code_projects" class="entry">
+      <div class='entry-header'>
+        <hr class='line-top'/>
+        <h3>{{project.title}}</h3>
+        <hr class='line-bottom'/>
+      </div>
+      <img src={{project.imgSrc}} alt={{project.imgAlt}} id={{project.imgId}} class="entry-img"/>
+      <div class="entry-notes">
+        <div [innerHtml]="project.description"></div>
+        <a href={{project.link}} target="_blank" class="description-link">{{project.linkText}}</a>
+      </div>
+    </div>
+  </div>
+</div>

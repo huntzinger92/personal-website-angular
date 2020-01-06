@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/personal-website-angular",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+
+      }
+    ]
+  }
+}

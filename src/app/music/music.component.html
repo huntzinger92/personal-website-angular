@@ -1,0 +1,14 @@
+<div id='music-wrapper'>
+      <div class='container'>
+        <div *ngFor="let entry of musical_works" class='entry' id={{entry.id}}>
+          <div class='entry-header'>
+            <hr class='line-top'/>
+            <h3>{{entry.title}}</h3>
+            <hr class='line-bottom'/>
+          </div>
+          <img src={{entry.imgSrc}} alt={{entry.imgAlt}} id={{entry.imgId}} class='entry-img'/>
+          <img *ngIf="entry.has2ndImg" src={{entry.img2Src}} alt={{entry.img2Alt}} id={{entry.img2Id}} class='entry-img'/>
+          <div class='entry-notes' [innerHtml]="entry.description" id={{entry.notesId}}></div>
+        </div>
+      </div>
+    </div>

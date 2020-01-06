@@ -1,0 +1,11 @@
+<div id='card-wrapper'>
+  <div *ngFor="let project of current_projects" id={{project.id}} class='card'>
+    <img src={{project.imgSrc}} alt={{project.imgAlt}} id={{project.imgId}} />
+    <div class='header-wrapper'>
+      <hr class='line-top'/>
+      <h3>{{project.title}}</h3>
+      <hr class='line-bottom'/>
+    </div>
+    <div [innerHtml]="project.description"></div>
+  </div>
+</div>

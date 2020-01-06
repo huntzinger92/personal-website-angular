@@ -1,0 +1,155 @@
+#code-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+#container {
+  grid-column: 2;
+  padding-left: 0px; /* this got set to 40px somehow, investigate later */
+}
+
+#page-description {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,.75);
+  border-radius: 4px;
+  padding: 15px;
+  padding-top: 7px;
+}
+
+#p-description {
+  text-indent: 30pt;
+  font-size: 17px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  margin-bottom: 35px;
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,.75);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.entry-header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+.entry-img {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid rgba(0,0,0,.15);
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+}
+
+#finances-img {
+
+}
+
+.entry-notes {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  opacity: .5;
+}
+
+.line-top {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.line-bottom {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.link-wrapper {
+  margin-bottom: 10px;
+}
+
+.description-link {
+  color: inherit;
+  font-weight: 620;
+  text-decoration: none;
+  margin: auto 3px;
+}
+
+.description-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+@media (max-width: 1200px) {
+  #code-wrapper {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  #code-wrapper {
+    grid-template-columns: 50px 1fr 50px;
+  }
+      #R4CH43L-img {
+        width: 65%;
+      }
+      #isolation-chamber-img {
+        width: 75%;
+      }
+    }
+@media (max-width: 800px) {
+  .entry {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+  }
+  .enter-header {
+    grid-column-end: 2;
+  }
+  .entry-img {
+    grid-row: 2;
+    width: 85%;
+  }
+  .entry-notes {
+    grid-row: 3;
+    grid-column: 1;
+    margin: auto 15px;
+  }
+}
+@media (max-width: 600px) {
+  #code-wrapper {
+    grid-template-columns: 15px 1fr 15px;
+  }
+  #nav-bar {
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+  }
+  #nav-name {
+    display: none;
+  }
+  #nav-links {
+    grid-column: 1;
+    margin-right: auto;
+    margin-top: auto;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+}

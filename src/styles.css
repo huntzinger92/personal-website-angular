@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+        min-height: 100%;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Montserrat', serif;
+        background: rgb(87,87,87);
+        background: linear-gradient(0deg, #2f2f2f 0%, rgba(0,0,0,1) 100%);
+        min-height: 100%;
+      }

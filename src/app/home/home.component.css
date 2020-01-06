@@ -1,0 +1,107 @@
+#home-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+      }
+      #intro-wrapper {
+        grid-column: 2;
+        display: grid;
+        grid-template-rows: auto auto;
+        margin-top: 8px;
+        margin-bottom: 25px;
+        background-color: #f0f0f0;
+      }
+      #header-img {
+        object-fit: cover;
+        width: 100%;
+        grid-row: 1;
+      }
+      #greeting-wrapper {
+        grid-row: 2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-rows: auto auto;
+        background-color: #f0f0f0;
+        padding: 0px 40px;
+      }
+      #greeting {
+        text-align: center;
+        background-color: #f0f0f0;
+        grid-row: 1;
+      }
+      .greeting-header {
+        font-size: 25px;
+      }
+      #icons {
+        text-align: center;
+        grid-row: 2;
+      }
+      .fab {
+        color: #141414;
+        margin: auto 15px;
+      }
+      #git {
+        border-radius: 30%;
+        border: 4px solid #f0f0f0;
+      }
+      #twitter {
+        border-radius: 30%;
+        border: 4px solid #f0f0f0;
+      }
+      .icon-link:hover #git {
+        color: #f0f0f0;
+        background-color: #141414;
+        border-radius: 30%;
+        border: 4px solid #141414;
+      }
+      .icon-link:hover #twitter {
+        color: #f0f0f0;
+        background-color: #141414;
+        border-radius: 30%;
+        border: 4px solid #141414;
+      }
+      /* I figured out how to get the icons to switch on hover, but decided against it for aesthetic reasons. Saved for potential future use.
+      .icon-link:hover #git-before:before {
+        content: "\f092";
+      }*/
+      hr {
+        border: 0;
+        clear:both;
+        display:block;
+        width: 100%;
+        background-color: black;
+        height: 1px;
+        opacity: .35;
+      }
+      @media (max-width: 1200px) {
+        #home-wrapper {
+          grid-template-columns: 1fr 6fr 1fr;
+        }
+      }
+      @media (max-width: 1000px) {
+        #home-wrapper {
+          grid-template-columns: 50px 1fr 50px;
+        }
+      }
+      @media (max-width: 600px) {
+        #home-wrapper {
+          grid-template-columns: 15px 1fr 15px;
+        }
+        #nav-bar {
+          grid-template-columns: auto;
+          justify-content: center;
+          align-items: center;
+          grid-gap: 10px;
+        }
+        #nav-name {
+          display: none;
+        }
+        #nav-links {
+          grid-column: 1;
+          margin-right: auto;
+          margin-top: auto;
+        }
+        .nav-link {
+          font-size: 18px;
+        }
+      }

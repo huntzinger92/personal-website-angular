@@ -1,0 +1,209 @@
+#music-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+.container {
+  grid-column: 2;
+  padding-left: 0px; /* this got set to 40px somehow*/
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  margin-bottom: 35px;
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,.75);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+#ekmousike-entry {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr auto auto;
+  grid-row-gap: 15px;
+  grid-column-gap: 25px;
+  padding: 15px;
+}
+
+#sunset {
+  width: 100%;
+  height: auto;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#trifid {
+  width: 100%;
+  height: auto;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#ekmousike-list {
+  list-style: none;
+}
+
+.entry-header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+.entry-img {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid rgba(0,0,0,.15);
+  width: 90%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#R4CH43L-img {
+  width: 77%;
+}
+
+.entry-notes {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#ekmousike-notes {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  opacity: .5;
+}
+
+.line-top {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.line-bottom {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.link-wrapper {
+  margin-bottom: 10px;
+}
+
+.description-link {
+  color: black;
+  font-weight: 620;
+  text-decoration: none;
+  margin: auto 3px;
+}
+
+.description-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+@media (max-width: 1200px) {
+  #music-wrapper {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  #R4CH43L-img {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #music-wrapper {
+    grid-template-columns: 50px 1fr 50px;
+  }
+  #R4CH43L-img {
+    width: 65%;
+  }
+  #isolation-chamber-img {
+    width: 75%;
+  }
+  #colters-hell-img {
+    height: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .entry {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+  }
+  .enter-header {
+    grid-column-end: 2;
+  }
+  .entry-img {
+    grid-row: 2;
+    width: 50%;
+  }
+  .entry-notes {
+    grid-row: 3;
+    grid-column: 1;
+    margin: auto 15px;
+  }
+  #colters-hell-img {
+    width: 63%;
+    height: auto;
+  }
+  #R4CH43L-img {
+    width: 50%;
+  }
+  #ekmousike-entry {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 5px;
+  }
+  #trifid {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+  }
+  #sunset {
+    grid-column: 2;
+    grid-row: 2;
+    width: 85%;
+  }
+  #ekmousike-notes {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  #isolation-chamber-img {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  #music-wrapper {
+    grid-template-columns: 15px 1fr 15px;
+  }
+  #nav-bar {
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+  }
+  #nav-name {
+    display: none;
+  }
+  #nav-links {
+    grid-column: 1;
+    margin-right: auto;
+    margin-top: auto;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+}
