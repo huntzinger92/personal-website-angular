@@ -87,21 +87,4 @@
         #home-wrapper {
           grid-template-columns: 15px 1fr 15px;
         }
-        #nav-bar {
-          grid-template-columns: auto;
-          justify-content: center;
-          align-items: center;
-          grid-gap: 10px;
-        }
-        #nav-name {
-          display: none;
-        }
-        #nav-links {
-          grid-column: 1;
-          margin-right: auto;
-          margin-top: auto;
-        }
-        .nav-link {
-          font-size: 18px;
-        }
       }
