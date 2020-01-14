@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -14,8 +16,10 @@ import { CurrentComponent } from './current/current.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  imports: [ BrowserModule, 
-             FormsModule, 
+  imports: [ BrowserModule,
+             FormsModule,
+             ReactiveFormsModule,
+             HttpClientModule,
              RouterModule.forRoot([
                { path: '', component: HomeComponent },
                { path: 'bio', component: BioComponent },
@@ -23,7 +27,7 @@ import { ContactComponent } from './contact/contact.component';
                { path: 'current', component: CurrentComponent },
                { path: 'code', component: CodeComponent },
                { path: 'contact', component: ContactComponent },
-              ]) 
+              ])
             ],
   declarations: [ AppComponent, HelloComponent, NavBarComponent, HomeComponent, BioComponent, MusicComponent, CodeComponent, CurrentComponent, ContactComponent ],
   bootstrap:    [ AppComponent ]
