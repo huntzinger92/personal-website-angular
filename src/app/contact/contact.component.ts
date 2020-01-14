@@ -35,11 +35,12 @@ export class ContactComponent implements OnInit {
           console.log(err.error.message);
         } else {
           //backend error. If status is 200, then the message successfully sent
-          if (err.status === '200') {
+          if (err.status === 200) {
             alert("Your message has been sent!");
           } else {
             alert("Something went wrong when sending your message.");
             console.log('Error status:');
+            console.log(typeof err.status);
             console.log(err.status);
             console.log('Error body:');
             console.log(err.error);
