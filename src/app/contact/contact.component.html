@@ -1,6 +1,6 @@
 <div id='container'>
   <div id='form-wrapper'>
-    <form [formGroup]='contactForm' subject='A Message From Personal Website' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
+    <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
       <input type="hidden" name="form-name" value="contact" />
       <p style='display: none;'>
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
