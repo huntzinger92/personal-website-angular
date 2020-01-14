@@ -27,13 +27,16 @@ export class ContactComponent implements OnInit {
     .append('art', this.contactForm.value.art)
     .append('message', this.contactForm.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
-      res => {alert("Your message has been sent!")},
+      res => {},
       err => {
         if (err instanceof ErrorEvent) {
-          alert("Client side error: " + err.error.message);
+          alert("Something went wrong when sending your message.");
+          console.log(err.error.message);
         } else {
-          alert("Backend error: $err.status, $err.error");
-        }
+          alert("Your message has been sent!");
+          console.log(err.status);
+          console.log(err.error);
+        };
       }
     );
   };
