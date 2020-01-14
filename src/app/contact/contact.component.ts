@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -28,7 +28,13 @@ export class ContactComponent implements OnInit {
     .append('message', this.contactForm.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
       res => {alert("Your message has been sent!")},
-      err => {alert(err.getOwnPropertyNames())}
+      err => {
+        if (err instanceof ErrorEvent) {
+          alert("Client side error: " + err.error.message);
+        } else {
+          alert("Backend error: $err.status, $err.error");
+        }
+      }
     );
   };
 
