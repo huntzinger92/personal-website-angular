@@ -27,7 +27,8 @@ export class ContactComponent implements OnInit {
     .append('art', this.contactForm.value.art)
     .append('message', this.contactForm.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
-      res => {}
+      res => {alert("Your message has been sent!")},
+      err => {alert("Message was not sent successfully.")}
     );
   };
 
