@@ -96,6 +96,10 @@ hr {
   text-decoration-color: black;
 }
 
+#ear-training-img {
+  width: 75%;
+}
+
 @media (max-width: 1200px) {
   #code-wrapper {
     grid-template-columns: 1fr 6fr 1fr;
@@ -105,13 +109,7 @@ hr {
   #code-wrapper {
     grid-template-columns: 50px 1fr 50px;
   }
-      #R4CH43L-img {
-        width: 65%;
-      }
-      #isolation-chamber-img {
-        width: 75%;
-      }
-    }
+}
 @media (max-width: 800px) {
   .entry {
     grid-template-columns: 1fr;

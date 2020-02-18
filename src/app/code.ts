@@ -1,8 +1,8 @@
 export const coding_projects = [
   {
     title: 'A Comphrensive Chord Progression Ear Trainer',
-    imgSrc: 'assets\\photos\\ear-trainer-img.jpg',
-    imgAlt: 'Screenshot of ear training app',
+    imgSrc: 'assets\\photos\\ear-trainer-img1.jpg',
+    imgAlt: 'Screenshot of ear training app quiz view',
     imgId: 'ear-training-img',
     description: '<p>As a music educator, I was often frustrated with the online tools available for teaching the skill of recognizng chord progressions by ear. I decided to design my own, allowing the user all of the fine degree of control I wished that I had for my own students. This app allows the user to loop playback, enable/disable any chord in a given key, toggle chord inversions, and more. It is my wish that this website goes on to fulfill that educational purposes for students everywhere, not just my own. This project was written using React.JS.</p>',
     link: 'https://github.com/huntzinger92/Ear-Training-Chord-Progression-Website',

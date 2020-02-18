@@ -40,7 +40,6 @@ export class ContactComponent implements OnInit {
           } else {
             alert("Something went wrong when sending your message.");
             console.log('Error status:');
-            console.log(typeof err.status);
             console.log(err.status);
             console.log('Error body:');
             console.log(err.error);

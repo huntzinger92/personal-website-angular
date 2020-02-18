@@ -51,6 +51,7 @@
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 1;
+  text-align: center;
 }
 
 .entry-img {
@@ -69,6 +70,10 @@
 .entry-notes {
   grid-column: 2;
   grid-row: 2;
+}
+
+.entry-notes > p {
+  margin-top: 3px;
 }
 
 #ekmousike-notes {

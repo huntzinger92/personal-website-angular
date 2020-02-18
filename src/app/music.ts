@@ -1,12 +1,19 @@
 export const musical_works = [{
   id: 'solo-transcriptions',
-  title: 'Eleven Latin Jazz Piano Solos (TBA)',
-  imgSrc: 'assets\\photos\\blank-book1.jpg',
-  imgAlt: 'placeholder for book cover',
-  imgId: 'transcription-book-img',
+  title: "Morgan's Song for Wind Ensemble (2020)",
+  imgSrc: 'assets\\photos\\morgans-song-score.png',
+  imgAlt: "Morgan's song score",
+  imgId: 'morgans-song-score',
   has2ndImg: false,
-  notesId: 'transcription-notes',
-  description: "<p class='entry-notes'>After joining the Kansas City Latin Jazz Orchestra, I spent many hours studying Afro-Cuban music to get a better understanding of the genre and ensure a more legitimate performance, focusing on the pianists of the tradition in particular. I found myself transcribing famous solos of latin jazz pianists, and noted that published transcriptions of most of the solos I studied didn't exist! To help make the genre more accessible for everybody, I figured I'd publish them myself. Solos from latin jazz giants like Charlie and Eddie Palmieri, Peruchin, and Dayramir Gonzalez included.</p><p>Difficulty ranges from intermediate to advanced. Coming soon.</p>"
+  notesId: 'morgans-song-notes',
+  description: `<p class='entry-notes' id='test'>"Morgan’s Song" was originally composed as a chamber work by my grandfather, Dr. Charles W. Smith. It is dedicated to his
+  granddaughter, my sister, Morgan Smith, whose birth coincided closely with the music’s genesis. The composition has become one of his most performed pieces, and
+  it seems that the work of arranging it for new ensembles has fallen to me, now that my grandfather has passed away. Dr. Janet Bass Smith (my grandmother - quite
+  the family affair) commissioned this arrangement for wind band, and I have added my own voice to the original work. The music begins in my grandfather’s consonant,
+  pastoral manner but, as the piece progresses, becomes increasingly dissonant and complex in a style more akin to my own.</p>
+  <p>For me, this gradual change is a kind of musical metaphor for how the baton of one musical generation gets passed on to the next. Although we are unique
+  individuals, we are indelibly shaped by who came before us, not just as artists, but in totality as human beings. I will always be grateful for the influence
+  and paths made possible for me (musical and otherwise) by my grandparents, and others who have come before me.</p>`
 },
 {
   id: 'colters-hell',
