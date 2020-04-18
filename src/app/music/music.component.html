@@ -1,6 +1,25 @@
 <div id='music-wrapper'>
       <div class='container'>
-        <div *ngFor="let entry of musical_works" class='entry' id={{entry.id}}>
+        <div class='prompt-container' [ngClass]="{'hide': !display_donation}">
+          <div class='prompt'>
+            <h4 class='donation-header' id='main-header'>Thanks for your interest!</h4>
+            <h4 class='donation-header'>The only way I can continue to create content like this is when people like you donate to help me pay my bills. If you like or use what I
+              make, please consider giving a little bit to help me keep making it.</h4>
+            <div id='amount-settings-container'>
+              <div id='amount-text-container'>
+                <h4 class='donation-header' id='amount-header'>Donation amount: $</h4>
+              </div>
+              <div id='amount-display'>
+                <form [formGroup]='customDonationAmount'>
+                  <input type='number' id='amount-change-input' onKeyPress="if(this.value.length===3) return false;" formControlName='amount' value="{{this.donationOrder.price}}">
+                </form>
+              </div>
+              <button id='decline-button' (click)="handlePayment()" (click)="toggleDonationDisplay($event, '')">Decline</button>
+            </div>
+          </div>
+          <div #paypal id='paypal-container'></div>
+        </div>
+        <div *ngFor="let entry of musical_works" class='entry' [ngClass]="{'mute' : display_donation}" id={{entry.id}}>
           <div class='entry-header'>
             <hr class='line-top'/>
             <h3>{{entry.title}}</h3>
@@ -8,7 +27,14 @@
           </div>
           <img src={{entry.imgSrc}} alt={{entry.imgAlt}} id={{entry.imgId}} class='entry-img'/>
           <img *ngIf="entry.has2ndImg" src={{entry.img2Src}} alt={{entry.img2Alt}} id={{entry.img2Id}} class='entry-img'/>
-          <div class='entry-notes' [innerHtml]="entry.description" id={{entry.notesId}}></div>
+          <div class='entry-notes' id={{entry.notesId}}>
+            <p *ngFor="let paragraph of entry.description">{{paragraph}}</p>
+            <div *ngIf="entry.links" class='link-wrapper'>
+              <a *ngFor="let link of entry.links"
+                  class='description-link'
+                  (click)="toggleDonationDisplay($event, link.href)">{{link.text}}</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

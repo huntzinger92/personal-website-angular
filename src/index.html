@@ -5,10 +5,26 @@
      <meta charset="utf-8" />
      <base href="/" />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+     <meta property="og:url" content="http://www.trevorspheresmith.com" />
+     <meta property="og:title" content="Trevor's Stuff" />
+     <meta property="og:description" content="Music, code, and what exactly I'm up to these days." />
+     <meta property="og:image" content="https://i.imgur.com/fnEdJ42.jpg" />
+
      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
      <script src="https://kit.fontawesome.com/011d5927b1.js"></script>
+     <script src="https://www.paypal.com/sdk/js?client-id=AcmX86NeUtHgLQwINUHqtFaTC8K6aA5A81751blg545iCDCoWKPmwyGfJzEssEPBL6qi3q1nXIaAuI5x"></script>
   </head>
   <body>
+    <!--
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" SameSite='none' Secure>
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="2BJWB3YZULSW6" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+    -->
+    <!-- note that the form below is hidden, but necessary for auto-form handling with Netlify -->
     <form name="contact" subject='A Message From Personal Website' netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />

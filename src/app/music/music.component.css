@@ -9,6 +9,91 @@
   padding-left: 0px; /* this got set to 40px somehow*/
 }
 
+.prompt-container {
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  top: 20px;
+  max-height: 95%;
+  overflow-y: auto;
+  z-index: 2;
+  border-radius: 3px;
+}
+
+.prompt {
+  padding: 25px;
+  background-color: #f0f8fa;
+}
+
+#main-header {
+  font-size: 25px;
+}
+
+.donation-header {
+  font-size: 22px;
+}
+
+#amount-settings-container {
+  display: flex;
+  justify-content: center;
+}
+
+#amount-display {
+  display: inline-block;
+  padding: 7px;
+  /*background-color: #31b543; <-- originally had a nice green background, but made div look like a button */
+  /*color: white;*/
+  background-color: #f0f8fa;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+#amount-text-container {
+  display: flex;
+  align-items: center;
+}
+
+#amount-header {
+  font-size: 22px;
+  margin: 1px 1px 1px 1px;
+}
+
+#amount-change-input {
+  font-size: 22px;
+  font-weight: bold;
+  max-width: 50px;
+  border: 0px;
+  background-color: #f0f8fa;
+}
+
+#decline-button {
+  font-size: 22px;
+  background-color: #f0f8fa;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#decline-button:hover {
+  background-color: black;
+  color: white;
+}
+
+#paypal-container {
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.mute {
+  opacity: .33;
+  z-index: 1;
+}
+
 .entry {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,7 +142,7 @@
 .entry-img {
   grid-column: 1;
   grid-row: 2;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0,0,0,.1);
   width: 90%;
   height: auto;
   margin-bottom: 15px;
