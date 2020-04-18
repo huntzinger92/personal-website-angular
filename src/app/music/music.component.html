@@ -7,14 +7,16 @@
               make, please consider giving a little bit to help me keep making it.</h4>
             <div id='amount-settings-container'>
               <div id='amount-text-container'>
-                <h4 class='donation-header' id='amount-header'>Donation amount: $</h4>
+                <h4 class='donation-header'>Donation <span class='nowrap'>amount: $</span></h4>
               </div>
-              <div id='amount-display'>
-                <form [formGroup]='customDonationAmount'>
+              <div id='amount-display' class='donation-inputs'>
+                <form id='donation-form' [formGroup]='customDonationAmount'>
                   <input type='number' id='amount-change-input' onKeyPress="if(this.value.length===3) return false;" formControlName='amount' value="{{this.donationOrder.price}}">
                 </form>
               </div>
-              <button id='decline-button' (click)="handlePayment()" (click)="toggleDonationDisplay($event, '')">Decline</button>
+              <div id='decline-button-container' class='donation-inputs'>
+                <button id='decline-button' (click)="handlePayment()" (click)="toggleDonationDisplay($event, '')">Decline</button>
+              </div>
             </div>
           </div>
           <div #paypal id='paypal-container'></div>

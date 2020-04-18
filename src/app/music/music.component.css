@@ -4,6 +4,10 @@
   grid-template-rows: auto;
 }
 
+.nowrap {
+  display: inline-block;
+}
+
 .container {
   grid-column: 2;
   padding-left: 0px; /* this got set to 40px somehow*/
@@ -41,8 +45,7 @@
 }
 
 #amount-display {
-  display: inline-block;
-  padding: 7px;
+  display: flex;
   /*background-color: #31b543; <-- originally had a nice green background, but made div look like a button */
   /*color: white;*/
   background-color: #f0f8fa;
@@ -61,6 +64,16 @@
   margin: 1px 1px 1px 1px;
 }
 
+.donation-inputs {
+  height: 50px;
+  align-self: center;
+}
+
+#donation-form {
+  align-self: center;
+  margin-left: 5px;
+}
+
 #amount-change-input {
   font-size: 22px;
   font-weight: bold;
@@ -69,11 +82,19 @@
   background-color: #f0f8fa;
 }
 
-#decline-button {
-  font-size: 22px;
+#decline-button-container {
   background-color: #f0f8fa;
   border: 1px solid black;
   border-radius: 10px;
+}
+
+#decline-button {
+  font-size: 22px;
+  border: none;
+  background-color: #f0f8fa;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 #decline-button:hover {
@@ -275,8 +296,49 @@ hr {
     width: 50%;
   }
 }
+
+@media (max-width: 900px) {
+    #main-header {
+      font-size: 16px;
+    }
+    .donation-header {
+      font-size: 14px;
+    }
+    #amount-change-input {
+      font-size: 14px;
+      max-width: 35px;
+    }
+    #decline-button-container {
+      height: 29px;
+    }
+    #decline-button {
+      font-size: 14px;
+    }
+    #amount-display {
+      height: 29px;
+    }
+  }
+
+@media (max-width: 650px) {
+  .prompt {
+    padding: 8px;
+  }
+  #amount-display {
+    margin-right: 7px;
+  }
+}
+
 @media (max-width: 600px) {
   #music-wrapper {
     grid-template-columns: 15px 1fr 15px;
+  }
+  .donation-header {
+    font-size: 14px;
+  }
+  #amount-changes-input {
+    font-size: 14px;
+  }
+  #decline-button {
+    font-size: 14px;
   }
 }
