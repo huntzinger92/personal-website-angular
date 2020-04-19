@@ -8,7 +8,7 @@ export const musical_works = [{
   notesId: '251-notes',
   description: [
     `One of my goals during the COVID-19 epidemic of 2020 (suddenly having more practice time on my hands) was to come out of it having developed a richer harmonic vocabulary
-    for comping over two five one chord progressions, especially using polychords and quartal harmony in the style of my favorite jazz pianists, like McCoy Tyner and Benny Green.
+    for comping over two five one chord progressions, especially using polychords and quartal harmony in the style of pianists like McCoy Tyner and Benny Green.
     To make this easier, I compiled a list my favorite 2-5-1 voicings into a single pdf.`,
     `I'm sharing it here as an educational resource - one that I hope makes it easier for
     other jazz players and composers to find ways to get away from the typical triadic voicings in their comping and arranging.`

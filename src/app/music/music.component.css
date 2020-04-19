@@ -14,7 +14,7 @@
 }
 
 .prompt-container {
-  background-color: white;
+  background-color: #f0f8fa;
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
@@ -24,11 +24,11 @@
   overflow-y: auto;
   z-index: 2;
   border-radius: 3px;
+  padding: 10px;
 }
 
 .prompt {
   padding: 25px;
-  background-color: #f0f8fa;
 }
 
 #main-header {
@@ -49,8 +49,6 @@
   /*background-color: #31b543; <-- originally had a nice green background, but made div look like a button */
   /*color: white;*/
   background-color: #f0f8fa;
-  border: 1px solid black;
-  border-radius: 10px;
   margin-right: 20px;
 }
 
@@ -72,6 +70,11 @@
 #donation-form {
   align-self: center;
   margin-left: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #amount-change-input {
@@ -79,20 +82,24 @@
   font-weight: bold;
   max-width: 50px;
   border: 0px;
+  margin-left: 4px;
+  margin-right: 2px;
   background-color: #f0f8fa;
 }
 
 #decline-button-container {
   background-color: #f0f8fa;
-  border: 1px solid black;
-  border-radius: 10px;
+  display: flex;
 }
 
 #decline-button {
   font-size: 22px;
-  border: none;
-  background-color: #f0f8fa;
+  font-weight: bold;
+  border: 1px solid black;
   border-radius: 10px;
+  background-color: #f0f8fa;
+  align-self: center;
+  justify-self: center;
   width: 100%;
   height: 100%;
 }
@@ -288,6 +295,12 @@ hr {
     grid-row: 2;
     width: 85%;
   }
+  #voicings-sample {
+    width: 85%;
+  }
+  #morgans-song-score {
+    width: 85%;
+  }
   #ekmousike-notes {
     grid-column: 1 / 3;
     grid-row: 3;
@@ -298,24 +311,27 @@ hr {
 }
 
 @media (max-width: 900px) {
+    .prompt-container {
+      width: 70%;
+    }
     #main-header {
-      font-size: 16px;
+      font-size: 18px;
     }
     .donation-header {
-      font-size: 14px;
+      font-size: 18px;
     }
     #amount-change-input {
-      font-size: 14px;
+      font-size: 18px;
       max-width: 35px;
     }
     #decline-button-container {
-      height: 29px;
+      height: 35px;
     }
     #decline-button {
-      font-size: 14px;
+      font-size: 18px;
     }
     #amount-display {
-      height: 29px;
+      height: 35px;
     }
   }
 
@@ -323,7 +339,24 @@ hr {
   .prompt {
     padding: 8px;
   }
+  #main-header {
+    font-size: 14px;
+  }
+  .donation-header {
+    font-size: 14px;
+  }
+  #amount-change-input {
+    font-size: 14px;
+    max-width: 35px;
+  }
+  #decline-button-container {
+    height: 29px;
+  }
+  #decline-button {
+    font-size: 14px;
+  }
   #amount-display {
+    height: 29px;
     margin-right: 7px;
   }
 }
