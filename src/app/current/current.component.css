@@ -1,90 +1,93 @@
 #card-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: repeat(3, auto);
-      grid-gap: 1em;
-    }
-    .card {
-      background-color: #f0f0f0;
-      border: 1px solid rgba(0,0,0,.75);
-      border-radius: 4px;
-      grid-column: 2 / 3;
-      padding: 15px;
-      display: grid;
-      grid-template-rows: auto auto auto;
-      justify-items: center;
-      margin: 10px auto;
-    }
-    .card > img {
-      grid-row: 1;
-      border: 1px solid rgba(0,0,0,.15);
-    }
-    .header-wrapper {
-      grid-row: 2;
-    }
-    .card-notes {
-      grid-row: 3;
-    }
-    #KCLJO-card {
-      margin-top: 25px;
-      grid-row: 1;
-    }
-    #BAM-card {
-      grid-row: 2;
-    }
-    #AME-card {
-      grid-row: 3;
-      margin-bottom: 25px;
-    }
-    #KCLJO-img {
-      width: 85%;
-      height: auto;
-    }
-    #BAM-img {
-      width: 50%;
-      height: auto;
-    }
-    #AME-img {
-      width: 55%;
-      height: auto;
-    }
-    hr {
-      border: 0;
-      clear:both;
-      display:block;
-      width: 100%;
-      background-color: black;
-      height: 1px;
-      opacity: .5;
-    }
-    .line-top {
-      margin-top: 35px;
-      margin-bottom: 10px;
-    }
-    .line-bottom {
-      margin-top: 10px;
-    }
-    .description-link {
-      color: black;
-      font-weight: 620;
-      text-decoration: none;
-    }
-    .description-link:hover {
-      text-decoration: underline;
-      text-decoration-color: black;
-    }
-    @media (max-width: 1000px) {
-      #card-wrapper {
-        grid-template-columns: 1fr 4fr 1fr;
-      }
-    }
-    @media (max-width: 800px) {
-      #card-wrapper {
-        grid-template-columns: 30px 1fr 30px;
-      }
-    }
-    @media (max-width: 600px) {
-      #card-wrapper {
-        grid-template-columns: 0px 1fr 0px;
-      }
-    }
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1em;
+  margin-top: 15px;
+}
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,.75);
+  border-radius: 4px;
+  grid-column: 2 / 3;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  margin: 10px auto;
+}
+.card > img {
+  grid-row: 1;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.header-wrapper {
+  grid-row: 2;
+}
+.card-notes {
+  grid-row: 3;
+}
+#KCLJO-card {
+  margin-top: 25px;
+}
+#BAM-card {
+
+}
+#AME-card {
+  margin-bottom: 25px;
+}
+#KCLJO-img {
+  width: 85%;
+  height: auto;
+}
+#BAM-img {
+  width: 50%;
+  height: auto;
+}
+#AME-img {
+  width: 55%;
+  height: auto;
+}
+#apc-img {
+  width: 65%;
+  height: auto;
+}
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  opacity: .5;
+}
+.line-top {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.line-bottom {
+  margin-top: 10px;
+}
+.description-link {
+  color: black;
+  font-weight: 620;
+  text-decoration: none;
+}
+.description-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+@media (max-width: 1000px) {
+  #card-wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  #card-wrapper {
+    grid-template-columns: 30px 1fr 30px;
+  }
+}
+@media (max-width: 600px) {
+  #card-wrapper {
+    grid-template-columns: 0px 1fr 0px;
+  }
+}

@@ -1,10 +1,49 @@
 <header id="nav-bar">
-  <a [routerLink]="['/']" id='nav-name'>Trevor Smith</a>
-  <nav id='nav-links'>
-    <a [routerLink]="['/bio']" class='nav-link'>Bio</a>
-    <a [routerLink]="['/music']" class='nav-link'>Music</a>
-    <a [routerLink]="['/code']" class='nav-link'>Code</a>
-    <a [routerLink]="['/current']" class='nav-link'>Current Projects</a>
-    <a [routerLink]="['/contact']" class='nav-link'>Contact</a>
-  </nav>
+  <div *ngIf='innerWidth > 560' id='big-window'>
+    <div id='nav-box-title' [routerLink]="['/']">
+      <a [routerLink]="['/']" class='nav-link' id='nav-title'>Trevor Smith</a>
+    </div>
+    <div>
+    </div>
+    <div class='nav-box' id='nav-box-bio' [routerLink]="['/bio']">
+      <a [routerLink]="['/bio']" class='nav-link'>Bio</a>
+    </div>
+    <div class='nav-box' [routerLink]="['/music']">
+      <a [routerLink]="['/music']" class='nav-link'>Music</a>
+    </div>
+    <div class='nav-box' [routerLink]="['/code']">
+      <a [routerLink]="['/code']" class='nav-link'>Code</a>
+    </div>
+    <div class='nav-box' [routerLink]="['/current']">
+      <a [routerLink]="['/current']" class='nav-link'>Projects</a>
+    </div>
+    <div class='nav-box' [routerLink]="['/contact']">
+      <a [routerLink]="['/contact']" class='nav-link'>Contact</a>
+    </div>
+  </div>
+  <div *ngIf='innerWidth <= 560' id='small-window'>
+    <div id='hamburger-wrapper' (click)="toggleHamburger()">
+      <i id='hamburger-icon' class="fa fa-bars fa-1x"></i>
+    </div>
+    <div class='nav-box' [routerLink]="['/']" (click)="toggleHamburger()">
+      <a [routerLink]="['/']" class='nav-link'>Trevor Smith</a>
+    </div>
+    <div *ngIf="showHamburger" id="hamburgerIngredients">
+      <div class='nav-box-hamburger' [routerLink]="['/bio']" (click)="toggleHamburger()">
+        <a [routerLink]="['/bio']" class='nav-link'>Bio</a>
+      </div>
+      <div class='nav-box-hamburger' [routerLink]="['/music']" (click)="toggleHamburger()">
+        <a [routerLink]="['/music']" class='nav-link'>Music</a>
+      </div>
+      <div class='nav-box-hamburger' [routerLink]="['/code']" (click)="toggleHamburger()">
+        <a [routerLink]="['/code']" class='nav-link'>Code</a>
+      </div>
+      <div class='nav-box-hamburger' [routerLink]="['/current']" (click)="toggleHamburger()">
+        <a [routerLink]="['/current']" class='nav-link'>Projects</a>
+      </div>
+      <div class='nav-box-hamburger' [routerLink]="['/contact']" (click)="toggleHamburger()" id='burger-bun'>
+        <a [routerLink]="['/contact']" class='nav-link'>Contact</a>
+      </div>
+    </div>
+  </div>
 </header>

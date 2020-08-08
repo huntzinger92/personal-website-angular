@@ -116,10 +116,8 @@ export const musical_works = [{
   notesId: 'isolation-notes',
   description: [
     `My first album of composed music.`,
-    `In graduate school, I was learning a lot about electronic production and recording techniques while simultaneously experimenting with electrifying my saxophone
-    sound with a guitar pedal and midi controllers in FL Studio. Each work was created entirely by me, blending acoustically and electronically generated sounds,
-    seeking to capture moods and moments from my own life. Thus, the title \"Isolation Chamber\". The works range from meditative ambience to IDM tone poems about
-    broken bill accepting machines.`
+    `While in graduate school, I began experimenting with electrifying acoustic instrument sounds (particularly saxophone) with guitar pedals and midi controllers, and I began to compose music by overlaying recordings of myself on top of each other.`,
+    `The result was this album, in which each work was composed and performed entirely by myself, blending acoustically and electronically generated sounds to capture moments and moods from my own life (thus the title \"Isolation Chamber\"). The works range in tone from meditative ambience to breakbeat tone poems about broken bill accepting machines.`
   ],
   links: [
     {href: 'https://www.youtube.com/playlist?list=PLiDgL0LMN2uP-OPxEmmO0O_RHj5b8-xzk', text: 'Link to Album'}
