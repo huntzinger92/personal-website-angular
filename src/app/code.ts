@@ -24,6 +24,6 @@ export const coding_projects = [
     imgId: 'finances-img',
     description: "<p>As a freelancer, I noticed how difficult it was for me to track my income - the total amount, the average over a period of time, seeing how much I made from each income source, etc. Failing to find an easily available application that fit my specific needs, I decided to use my knowledge of Python and its data-handling libraries to build what I needed for myself.</p><p>This program accepts a bank statement formatted as a .csv file and allows the user to view various data gleaned from their finances - average monthly income/expenditure/savings, instant and monthly bank account balance over time, projected savings, and, most importantly for freelancers like myself, the total amount of yearly income from each unique source in their account history.</p><p>This data is stored in a local database (via sqlite) for easy, recurrent access. I used the PyQt5 framework to produce a desktop graphic user interface.</p>",
     link: "https://github.com/huntzinger92/bank_statement_processing",
-    linkText: 'Link to Github Repository'
+    linkText: 'GitHub Repo'
   }
 ];
