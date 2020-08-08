@@ -1,65 +1,50 @@
-@media (min-width: 650px) {
-  #container {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-  }
-  #contact-form {
-    padding-left: 65px;
-    padding-right: 65px;
-  }
-}
-
-@media (max-width: 649px) {
-  #container {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-  }
-  #contact-form {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-}
-
-@media (max-width: 560px) {
-  #container {
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-  }
-}
-
 #form-wrapper {
   grid-column: 2;
   background-color: #f0f0f0;
   height: 90%;
   margin-top: 25px;
   margin-bottom: 25px;
+  border: 1px solid #1c1c1c;
   border-radius: 5px;
-
+  box-shadow: 3px 3px 3px black;
 }
 
 #contact-form {
   padding-top: 10px;
 }
 
-.form-row {
+#form-row-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 175px 200px 165px;
+  margin: auto;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
 }
 
 label {
   font-size: 14px;
   margin-bottom: 5px;
   font-weight: bold;
+  grid-column: 1;
+  justify-self: end;
+  margin-right: 8px;
 }
 
 input {
-  width: 90%;
+  grid-column: 2;
 }
 
 #message {
-  width: 90%;
-  height: 75px;
-  vertical-align: top;
+  grid-column: 2;
 }
 
 #button-row {
@@ -80,4 +65,52 @@ input {
 
 #submit-button:hover {
   background-color: #95c9a0;
+}
+
+@media (min-width: 650px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  #contact-form {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
+@media (max-width: 800px) {
+  .form-row {
+    display: grid;
+    grid-template-columns: 175px 200px 75px;
+    margin: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 649px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  #contact-form {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 560px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 170px 120px 20px;
+    margin: auto;
+    padding: 10px;
+  }
+  #contact-form {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }

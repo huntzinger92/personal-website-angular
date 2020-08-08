@@ -5,21 +5,24 @@
       <p style='display: none;'>
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </p>
-      <p class='form-row'>
+      <h2>Contact Me!</h2>
+      <div id='form-row-wrapper'>
+      <div class='form-row'>
         <label>Your Name: </label><input type='text' name="name" formControlName="name" required/>
-      </p>
-      <p class='form-row'>
+      </div>
+      <div class='form-row'>
         <label>Email Address: </label><input type='email' name="email" formControlName="email" required/>
-      </p>
-      <p class='form-row'>
+      </div>
+      <div class='form-row'>
         <label>A Favorite Work of Art: </label><input type='text' name="art" formControlName="art"/>
-      </p>
-      <p class='form-row'>
-        <label>Your Message: </label><textarea id='message' name="message" formControlName="message" required></textarea>
-      </p>
-      <p id='button-row'>
+      </div>
+      <div class='form-row'>
+        <label>Your Message:</label><textarea id='message' name="message" formControlName="message" required></textarea>
+      </div>
+      <div id='button-row'>
         <button id='submit-button' type='submit'>Send!</button>
-      </p>
+      </div>
+      </div>
     </form>
   </div>
 </div>
